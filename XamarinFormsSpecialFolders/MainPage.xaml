@@ -3,7 +3,6 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Label Text="All Special Folders" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Entry x:Name="XXo" />
         <ListView ItemsSource="{Binding AvailableFolders}">
             <ListView.ItemTemplate>
                 <DataTemplate>
