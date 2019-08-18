@@ -16,6 +16,8 @@ namespace XamarinFormsSpecialFolders
         public MainPage()
         {
             InitializeComponent();
+
+            var availableFolders = Helpers.StorageHelper.GetSpecialFolders();
         }
     }
 }
