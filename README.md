@@ -37,3 +37,47 @@ There are common locations that are **available** sometimes, only if the user gr
 * **Transient media**: So we also have this idea that videos and images can sort of exist on a device but they might actually exist somewhere else. For example, maybe these are going to be stored in iTunes ultimately or in One Drive. We have this transient media.
 
 Those locations are typically available if we get `permission`. So again, we're not talking about a wide open folder structure. We're talking about being able to access documents, images, videos, and those types of things.
+
+## Results of this app:
+Let me show you the results, you will get the same if you try to build this app on iOS or Android.
+
+![Results](/imgs/results.png)
+
+This App will list all special folders that you can access with a permission.
+### Special Folders for android
+    
+    Desktop=/data/user/0/[Package Name]/files/Desktop
+    MyDocuments=/data/user/0/[Package Name]/files
+    MyDocuments=/data/user/0/[Package Name]/files
+    MyMusic=/data/user/0/[Package Name]/files/Music
+    MyVideos=/data/user/0/[Package Name]/files/Videos
+    DesktopDirectory=/data/user/0/[Package Name]/files/Desktop
+    Fonts=/data/user/0/[Package Name]/files/.fonts
+    Templates=/data/user/0/[Package Name]/files/Templates
+    ApplicationData=/data/user/0/[Package Name]/files/.config
+    LocalApplicationData=/data/user/0/[Package Name]/files/.local/share
+    CommonApplicationData=/usr/share
+    MyPictures=/data/user/0/[Package Name]/files/Pictures
+    UserProfile=/data/user/0/[Package Name]/files
+    CommonTemplates=/usr/share/templates
+
+### Special Folders for iOS
+    
+    Desktop=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/Desktop
+    MyDocuments=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents
+    MyDocuments=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents
+    Favorites=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Library/Favorites
+    MyMusic=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/Music
+    MyVideos=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/Videos
+    DesktopDirectory=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/Desktop
+    Fonts=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/.fonts
+    Templates=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/Templates
+    ApplicationData=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/.config
+    LocalApplicationData=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents
+    InternetCache=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Library/Caches
+    CommonApplicationData=/usr/share
+    ProgramFiles=/Applications
+    MyPictures=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Documents/Pictures
+    UserProfile=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]
+    CommonTemplates=/usr/share/templates
+    Resources=/Users/[User Name]/Library/Developer/CoreSimulator/Devices/[Generated Sub-Folder]/data/Containers/Data/Application/[Generated Sub-Folder]/Library
