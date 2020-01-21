@@ -22,7 +22,7 @@ steps:
       sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_18_1
 - task: XamarinAndroid@1
   inputs:
-    projectFile: '**/*Droid*.csproj'
+    projectFile: '**/XamarinFormsSpecialFolders.Android.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 - task: CopyFiles@2
