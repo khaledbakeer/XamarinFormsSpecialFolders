@@ -26,19 +26,6 @@ steps:
   inputs:
     secureFile: production.jks
 
-- task: Bash@3
-  displayName: "Build and sign App Bundle"
-  inputs:
-    targetType: "inline"
-    script: |
-      msbuild -restore $(Build.SourcesDirectory)/XamarinAndroidAab/*.csproj -t:SignAndroidPackage -p:AndroidPackageFormat=aab -p:Configuration=$(buildConfiguration) -p:AndroidKeyStore=True -p:AndroidSigningKeyStore=$(keyStore.secureFilePath) -p:AndroidSigningStorePass=$(keystore.password) -p:AndroidSigningKeyAlias=$(key.alias) -p:AndroidSigningKeyPass=$(key.password)
-- task: CopyFiles@2
-  displayName: 'Copy deliverables'
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/XamarinAndroidAab/bin/$(buildConfiguration)'
-    Contents: '*.aab'
-    TargetFolder: 'drop'
-
 - task: PublishBuildArtifacts@1
   displayName: 'Publish release'
   inputs:
@@ -49,23 +36,3 @@ steps:
   inputs:
     username: 'khaledbakeer'
     personalAccessToken: '$(githubPersonnalAccessToken)'
-
-- task: AabConvertToUniversalApk@1
-  inputs:
-    aabFilePath: '$(Build.SourcesDirectory)/XamarinAndroidAab/bin/$(buildConfiguration)/*.aab'
-    keystoreFilePath: '$(keyStore.secureFilePath)'
-    keystorePassword: '$(keystore.password)'
-    keystoreAlias: '$(key.alias)'
-    keystoreAliasPassword: '$(key.password)'
-    outputFolder: '$(Build.SourcesDirectory)/tmp'
-
-- task: AppCenterDistribute@3
-  displayName: 'Distribute to Visual Studio App Center'
-  inputs:
-    serverEndpoint: 'VSAC'
-    appSlug: $(appSlug)
-    appFile: '$(Build.SourcesDirectory)/tmp/*.apk'
-    releaseNotesOption: 'input'
-    releaseNotesInput: 'New Version'
-    destinationType: 'groups'
-    distributionGroupId: $(distributionGroupId)
