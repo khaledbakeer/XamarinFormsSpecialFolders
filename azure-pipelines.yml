@@ -47,7 +47,7 @@ steps:
 
 - task: InstallBundletool@1
   inputs:
-    username: 'damienaicheh'
+    username: 'khaledbakeer'
     personalAccessToken: '$(githubPersonnalAccessToken)'
 
 - task: AabConvertToUniversalApk@1
