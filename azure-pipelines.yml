@@ -31,8 +31,3 @@ steps:
   inputs:
     pathToPublish: 'drop'
     artifactName: 'release'
-
-- task: InstallBundletool@1
-  inputs:
-    username: 'khaledbakeer'
-    personalAccessToken: '$(githubPersonnalAccessToken)'
